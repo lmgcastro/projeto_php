@@ -1,0 +1,35 @@
+.hide {
+	display: none;
+}
+
+#tbl_chat {
+	width: 90%;
+	margin: auto;
+}
+
+.td_sender {
+	text-align: left;
+}
+
+.td_recipient {
+	text-align: right;
+}
+
+.td_msg_sen {
+	text-align: right;
+}
+
+.td_msg_rec {
+	text-align: left;
+}
+
+#div_msg {
+	width: 50%;
+	margin: auto;
+	padding: 50px;
+}
+
+#inp_msg {
+	width: 90%;
+	text-align: center;
+}
