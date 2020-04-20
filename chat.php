@@ -6,7 +6,7 @@
 <html>
 	<head>
 	    <meta charset="UTF-8">
-	    <title>Projeto PHP</title>
+	    <title>Chat</title>
 	    <link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
@@ -30,29 +30,27 @@
             $message[] = $row['message'];
         }
 ?>
+		<form id="form_msg" method="POST" action="db/send_msg.php">
+			<div id="div_msg">
+				<input id="inp_msg" type="text" name="message" />
+				<button type="submit" name="send">Enviar</button>
+			</div>
+		</form>
 		<table id="tbl_chat">
 <?php
 	        	for ($c = 0; $c < count($sender); $c++) {
 	        		$msg_rec = $sender[$c] == $rec;
 ?>
 			<tr>
-				<td class="td_recipient"><?php echo $msg_rec ? $sender[$c] : "" ?></td>
+				<td class="td_rec"><?php echo $msg_rec ? $sender[$c] : "" ?></td>
 				<td class=<?php echo $msg_rec ? "td_msg_rec" : "td_msg_sen" ?>><?php echo $message[$c] ?></td>
-				<td class="td_sender"><?php echo !$msg_rec ? $sender[$c] : "" ?></td>
+				<td class="td_sen"><?php echo !$msg_rec ? $sender[$c] : "" ?></td>
 			</tr>
 <?php
 				}			
 			}
 ?>
 		</table>
-		<form id="form_msg" method="POST" action="db/send_msg.php">
-			<input class="hide" type="text" name="sender" value=<?php echo $sen ?> />
-			<input class="hide" type="text" name="recipient" value=<?php echo $rec ?> />
-			<div id="div_msg">
-				<input id="inp_msg" type="text" name="message" />
-				<button type="submit" name="send">Enviar</button>
-			</div>
-		</form>
 	    <!-- <script src="js/jquery-3.3.1.js"></script> -->
 	    <!-- <script src="js/events.js"></script> -->
 	</body>

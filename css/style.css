@@ -2,17 +2,43 @@
 	display: none;
 }
 
+#div_ini {
+	width: 10%;
+	margin: auto;
+	padding: 20px;
+	margin-top: 10%;
+	text-align: center;
+}
+
+.inp_ini {
+	margin: 10px;
+	text-align: center;
+}
+
+#div_msg {
+	width: 50%;
+	margin: auto;
+	padding: 20px;
+}
+
+#inp_msg {
+	width: 90%;
+	text-align: center;
+}
+
 #tbl_chat {
 	width: 90%;
 	margin: auto;
 }
 
-.td_sender {
+.td_sen {
 	text-align: left;
+	font-weight: bold;
 }
 
-.td_recipient {
+.td_rec {
 	text-align: right;
+	font-weight: bold;
 }
 
 .td_msg_sen {
@@ -21,15 +47,4 @@
 
 .td_msg_rec {
 	text-align: left;
-}
-
-#div_msg {
-	width: 50%;
-	margin: auto;
-	padding: 50px;
-}
-
-#inp_msg {
-	width: 90%;
-	text-align: center;
 }

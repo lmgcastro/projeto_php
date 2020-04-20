@@ -1,8 +1,8 @@
 <?php
 	include_once 'db.php';
 
-	$sen = $_POST['sender'];
-	$rec = $_POST['recipient'];
+	$sen = $_COOKIE['sender'];
+	$rec = $_COOKIE['recipient'];
 	$msg = $_POST['message'];
 
 	$sql = "INSERT INTO chat VALUES (DEFAULT, '$sen', '$rec', '$msg');";
